@@ -1,0 +1,6 @@
+{
+  "name": "@coates/shared",
+  "version": "0.1.0",
+  "private": true,
+  "types": "src/types.ts"
+}

@@ -1,0 +1,21 @@
+import 'dotenv/config'
+import { NestFactory } from '@nestjs/core'
+import { AppModule } from './app.module'
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule, { cors: true })
+
+  const config = new DocumentBuilder()
+    .setTitle('Coates API')
+    .setDescription('API for products, inventory, parts lookup, cart')
+    .setVersion('0.1.0')
+    .build()
+  const document = SwaggerModule.createDocument(app, config)
+  SwaggerModule.setup('docs', app, document)
+
+  const port = process.env.PORT || 4000
+  await app.listen(port)
+  console.log(`API running on :${port}`)
+}
+bootstrap()

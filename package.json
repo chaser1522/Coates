@@ -1,0 +1,15 @@
+{
+  "name": "coates-landscape-supply",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace @coates/web run dev",
+    "dev:api": "npm --workspace @coates/api run start:dev",
+    "build": "npm -w @coates/web run build && npm -w @coates/api run build",
+    "test": "echo \"(placeholder)\""
+  }
+}

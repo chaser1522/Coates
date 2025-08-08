@@ -1,0 +1,81 @@
+{
+  "products": [
+    {
+      "sku": "ABC-100",
+      "title": "Blade Kit 21\"",
+      "price": 39.99,
+      "inStock": true
+    },
+    {
+      "sku": "ABC-200",
+      "title": "Belt A42",
+      "price": 24.5,
+      "inStock": true
+    },
+    {
+      "sku": "DEF-300",
+      "title": "Air Filter Pro",
+      "price": 12.99,
+      "inStock": false
+    }
+  ],
+  "inventory": {
+    "ABC-100": {
+      "sku": "ABC-100",
+      "onHand": 42,
+      "available": 39,
+      "locations": [
+        {
+          "id": "IDF",
+          "qty": 20
+        },
+        {
+          "id": "REX",
+          "qty": 22
+        }
+      ]
+    },
+    "ABC-200": {
+      "sku": "ABC-200",
+      "onHand": 15,
+      "available": 15,
+      "locations": [
+        {
+          "id": "IDF",
+          "qty": 10
+        },
+        {
+          "id": "REX",
+          "qty": 5
+        }
+      ]
+    },
+    "DEF-300": {
+      "sku": "DEF-300",
+      "onHand": 0,
+      "available": 0,
+      "locations": []
+    }
+  },
+  "serialIndex": {
+    "SN123": [
+      {
+        "sku": "ABC-100",
+        "title": "Blade Kit 21\"",
+        "confidence": 0.92
+      }
+    ],
+    "SN124": [
+      {
+        "sku": "ABC-200",
+        "title": "Belt A42",
+        "confidence": 0.88
+      },
+      {
+        "sku": "DEF-300",
+        "title": "Air Filter Pro",
+        "confidence": 0.61
+      }
+    ]
+  }
+}
